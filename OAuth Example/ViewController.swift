@@ -16,22 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet var button: UIButton!
     @IBOutlet var label: UILabel!
 
-
-    // MARK: IBActions
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        let authURI = "https://developers.h-m.space/hm_cloud/o/58e057cb-819d-42bf-b2e4-7ed9d0fca77b/oauth"
-        let clientID = "2cd61aa3-0d3a-4490-a836-1d53a3b95983"
-        let redirectURI = "com.hm.dev.1503672371-xuub2pgnna8k://in-app-callback"
-        let scope = "door-locks.read,door-locks.write"
-        let appID = "2D26B927CBC4BC299807EC8F"
-
-        guard let url = OAuthManager.oauthURL(authURI: authURI, clientID: clientID, redirectURI: redirectURI, scope: scope, appID: appID) else {
-            return
-        }
-
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
+    fileprivate var appID: String!
+    fileprivate var authURI: String!
+    fileprivate var clientID: String!
+    fileprivate var redirectScheme: String!
+    fileprivate var scope: String!
+    fileprivate var tokenURI: String!
 
 
     // MARK: Methods
@@ -109,11 +99,52 @@ class ViewController: UIViewController {
         // PASTE THE SNIPPET HERE
 
         guard LocalDevice.shared.certificate != nil else {
-            fatalError("You've forgotten the INITIALISATION")
+            fatalError("You've forgotten the LocalDevice's INITIALISATION")
         }
+
+
+
+        /*
+ 
+         Before using the OAuth, it's required variables must be set:
+         - go to https://developers.high-mobility.com/oauth to get and paste:
+            * authURI
+            * clientID
+            * tokenURI
+            * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
+         - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 more thing:
+            * choose an APP by clicking on it's identifier (serial number, it turns gray when hovering)
+            * copy the APP ID
+         - figure out the "scope"
+            * an example, that would be needed for this sample – "door-locks.read,door-locks.write"
+         - now fill in all the needed vars
+ 
+         */
+
+//        appID = <#String#>
+//        authURI = <#String#>
+//        clientID = <#String#>
+//        redirectScheme = <#String#>
+//        scope = <#String#>
+//        tokenURI = <#String#>
+
+        guard appID != nil, authURI != nil, clientID != nil, redirectScheme != nil, scope != nil, tokenURI != nil else {
+            fatalError("You've forgotten to set the necessary variables!")
+        }
+
+
 
         // Logging options that are interesting to you
         LocalDevice.loggingOptions = [.bluetooth, .telematics]
+
+        // After a tiny delay, open the OAuth URL
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            guard let url = OAuthManager.oauthURL(authURI: self.authURI, clientID: self.clientID, redirectScheme: self.redirectScheme, scope: self.scope, appID: self.appID) else {
+                return
+            }
+
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
 
@@ -145,13 +176,9 @@ fileprivate extension ViewController {
     }
 
     func executeAccessTokenRequest(code: String) {
-        let tokenURI = "https://developers.h-m.space/hm_cloud/api/v1/58e057cb-819d-42bf-b2e4-7ed9d0fca77b/oauth/access_tokens"
-        let redirectURI = "com.hm.dev.1503672371-xuub2pgnna8k://in-app-callback"
-        let clientID = "2cd61aa3-0d3a-4490-a836-1d53a3b95983"
-
         button.setTitle("Getting Access Token...", for: .normal)
 
-        OAuthManager.requestAccessToken(tokenURI: tokenURI, redirectURI: redirectURI, clientID: clientID, code: code) { (result: OAuthManager.AccessTokenResult) in
+        OAuthManager.requestAccessToken(tokenURI: tokenURI, redirectScheme: redirectScheme, clientID: clientID, code: code) { (result: OAuthManager.AccessTokenResult) in
             OperationQueue.main.addOperation {
                 switch result {
                 case .error(let reason):

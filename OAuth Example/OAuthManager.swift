@@ -25,11 +25,11 @@ struct OAuthManager {
     typealias AccessTokenCompletionBlock = (AccessTokenResult) -> Void
 
 
-    static func oauthURL(authURI: String, clientID: String, redirectURI: String, scope: String, appID: String, state: String? = nil, validity: (start: Date, end: Date)? = nil) -> URL? {
+    static func oauthURL(authURI: String, clientID: String, redirectScheme: String, scope: String, appID: String, state: String? = nil, validity: (start: Date, end: Date)? = nil) -> URL? {
         var completeURI: String = authURI
 
         completeURI += "?client_id=" + clientID
-        completeURI += "&redirect_uri=" + redirectURI
+        completeURI += "&redirect_uri=" + redirectScheme
         completeURI += "&scope=" + scope
         completeURI += "&app_id=" + appID
 
@@ -69,12 +69,12 @@ struct OAuthManager {
         }
     }
 
-    static func requestAccessToken(tokenURI: String, redirectURI: String, clientID: String, code: String, completion: @escaping AccessTokenCompletionBlock) {
+    static func requestAccessToken(tokenURI: String, redirectScheme: String, clientID: String, code: String, completion: @escaping AccessTokenCompletionBlock) {
         var completeURI: String = tokenURI
 
         completeURI += "?client_id=" + clientID
         completeURI += "&code=" + code
-        completeURI += "&redirect_uri=" + redirectURI
+        completeURI += "&redirect_uri=" + redirectScheme
 
         guard let url = URL(string: completeURI) else {
             return completion(.error("Failed to combine URL from: \(completeURI)"))
