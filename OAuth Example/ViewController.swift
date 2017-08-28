@@ -106,20 +106,6 @@ class ViewController: UIViewController {
 
          */
 
-
-        // ----------------------------------------------------------------------------
-        Telematics.urlBasePath = "https://developers.h-m.space/"
-        do {
-            try LocalDevice.shared.initialise(deviceCertificate: "dGVzdC0muSfLxLwpmAfsj6cNVRc8b0WtZXgBdiTOgPcxuF8/7hrQ08R54Xj72Ltx2cZXc3mmRWxdztR4zFvFi59m8ie5jpR/B2lQgaX7MCmgsOgalxnC9H2UBnxDIYOyJonZTk4oUI5M2EGWWl859GIYPksnjeCDmIlDnQazwsLlVWrygbiPTaFOxgGpIjwtQZugcG/W0fM3",
-                                                    devicePrivateKey: "07RIQFANxCXvRaEPNJ9eO51hKkKjZDyKQsjflC6QBPY=",
-                                                    issuerPublicKey: "9YZA1GxGYpCCRCrSW572ijmZNiSMtzTaNwrEugSlDW6jQA3M1hxWo3c4eqF9FK84H68gfW1QWnCip5nxO0RW9g==")
-        }
-        catch {
-            print("Invalid initialisation parameters, please double check the snippet, error: \(error)")
-        }
-        // ----------------------------------------------------------------------------
-
-
         // PASTE THE SNIPPET HERE
 
         guard LocalDevice.shared.certificate != nil else {
