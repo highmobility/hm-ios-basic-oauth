@@ -1,5 +1,5 @@
 //
-//  OAuhtManager.swift
+//  OAuthManager.swift
 //  OAuth Example
 //
 //  Created by Mikk Rätsep on 25/08/2017.

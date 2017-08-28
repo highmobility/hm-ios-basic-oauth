@@ -106,6 +106,7 @@ class ViewController: UIViewController {
 
          */
 
+
         // ----------------------------------------------------------------------------
         Telematics.urlBasePath = "https://developers.h-m.space/"
         do {
@@ -117,6 +118,7 @@ class ViewController: UIViewController {
             print("Invalid initialisation parameters, please double check the snippet, error: \(error)")
         }
         // ----------------------------------------------------------------------------
+
 
         // PASTE THE SNIPPET HERE
 
@@ -181,6 +183,8 @@ fileprivate extension ViewController {
     }
 
     func sendTelematicsCommand(to vehicleSerial: Data) {
+        button.setTitle("Sending Telematics command...", for: .normal)
+
         do {
             typealias Command = AutoAPI.DoorLocksCommand
 
@@ -190,20 +194,20 @@ fileprivate extension ViewController {
                 OperationQueue.main.addOperation {
                     switch result {
                     case .failure(let reason):
-                        self.label.text = "SEND TELEMATICS COMMAND\nerror: " + reason
+                        self.label.text = "SENT TELEMATICS COMMAND\nerror: " + reason
 
                     case .success(let responseData):
                         guard let data = responseData else {
-                            return self.label.text = "SEND TELEMATICS COMMAND\nerror: [no data]"
+                            return self.label.text = "SENT TELEMATICS COMMAND\nerror: [no data]"
                         }
 
-                        self.label.text = "SEND TELEMATICS COMMAND\nsuccess: " + data.map { String(format: "%02X", $0) }.joined()
+                        self.label.text = "SENT TELEMATICS COMMAND\nsuccess: " + data.map { String(format: "%02X", $0) }.joined()
 
                         guard let response = AutoAPI.parseIncomingCommand(data)?.value as? Command.Response else {
-                            return self.label.text = "SEND TELEMATICS COMMAND\nerror: response is of unexpected value" + data.map { String(format: "%02X", $0) }.joined()
+                            return self.label.text = "SENT TELEMATICS COMMAND\nerror: response is of unexpected value" + data.map { String(format: "%02X", $0) }.joined()
                         }
 
-                        self.label.text = "SEND TELEMATICS COMMAND\nsuccess: \(response.doors)"
+                        self.label.text = "SENT TELEMATICS COMMAND\nsuccess: \(response.doors)".replacingOccurrences(of: "AutoAPI.", with: "")
                     }
                 }
             })

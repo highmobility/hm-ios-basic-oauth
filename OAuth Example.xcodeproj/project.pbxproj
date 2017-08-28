@@ -18,7 +18,7 @@
 		2096A49C1F543B57003D4E37 /* HMCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4971F543B57003D4E37 /* HMCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2096A49D1F543B57003D4E37 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; };
 		2096A49E1F543B57003D4E37 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		20E4CE291F5043FB00B71096 /* OAuhtManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4CE281F5043FB00B71096 /* OAuhtManager.swift */; };
+		20E4CE291F5043FB00B71096 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4CE281F5043FB00B71096 /* OAuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,7 +48,7 @@
 		2096A4961F543B57003D4E37 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
 		2096A4971F543B57003D4E37 /* HMCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCrypto.framework; sourceTree = "<group>"; };
 		2096A4981F543B57003D4E37 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
-		20E4CE281F5043FB00B71096 /* OAuhtManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuhtManager.swift; sourceTree = "<group>"; };
+		20E4CE281F5043FB00B71096 /* OAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2017F4661F5014A200BCB1FB /* AppDelegate.swift */,
-				20E4CE281F5043FB00B71096 /* OAuhtManager.swift */,
+				20E4CE281F5043FB00B71096 /* OAuthManager.swift */,
 				2017F4681F5014A200BCB1FB /* ViewController.swift */,
 			);
 			name = Source;
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */,
-				20E4CE291F5043FB00B71096 /* OAuhtManager.swift in Sources */,
+				20E4CE291F5043FB00B71096 /* OAuthManager.swift in Sources */,
 				2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
