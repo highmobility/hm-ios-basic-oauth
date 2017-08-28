@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4661F5014A200BCB1FB /* AppDelegate.swift */; };
+		2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4681F5014A200BCB1FB /* ViewController.swift */; };
+		2017F46C1F5014A200BCB1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46A1F5014A200BCB1FB /* Main.storyboard */; };
+		2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46D1F5014A200BCB1FB /* Assets.xcassets */; };
+		2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */; };
+		2096A4991F543B57003D4E37 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4961F543B57003D4E37 /* AutoAPI.framework */; };
+		2096A49A1F543B57003D4E37 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4961F543B57003D4E37 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2096A49B1F543B57003D4E37 /* HMCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4971F543B57003D4E37 /* HMCrypto.framework */; };
+		2096A49C1F543B57003D4E37 /* HMCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4971F543B57003D4E37 /* HMCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2096A49D1F543B57003D4E37 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; };
+		2096A49E1F543B57003D4E37 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		20E4CE291F5043FB00B71096 /* OAuhtManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4CE281F5043FB00B71096 /* OAuhtManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2096A49F1F543B57003D4E37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2096A49C1F543B57003D4E37 /* HMCrypto.framework in Embed Frameworks */,
+				2096A49E1F543B57003D4E37 /* HMKit.framework in Embed Frameworks */,
+				2096A49A1F543B57003D4E37 /* AutoAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2017F4631F5014A200BCB1FB /* OAuth Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2017F4661F5014A200BCB1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2017F4681F5014A200BCB1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2017F46B1F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2017F46D1F5014A200BCB1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2017F4701F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2017F4721F5014A200BCB1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2096A4961F543B57003D4E37 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
+		2096A4971F543B57003D4E37 /* HMCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCrypto.framework; sourceTree = "<group>"; };
+		2096A4981F543B57003D4E37 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
+		20E4CE281F5043FB00B71096 /* OAuhtManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuhtManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2017F4601F5014A200BCB1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2096A49B1F543B57003D4E37 /* HMCrypto.framework in Frameworks */,
+				2096A49D1F543B57003D4E37 /* HMKit.framework in Frameworks */,
+				2096A4991F543B57003D4E37 /* AutoAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2017F45A1F5014A200BCB1FB = {
+			isa = PBXGroup;
+			children = (
+				2096A4961F543B57003D4E37 /* AutoAPI.framework */,
+				2096A4971F543B57003D4E37 /* HMCrypto.framework */,
+				2096A4981F543B57003D4E37 /* HMKit.framework */,
+				2017F4651F5014A200BCB1FB /* OAuth Example */,
+				2017F4641F5014A200BCB1FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2017F4641F5014A200BCB1FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2017F4631F5014A200BCB1FB /* OAuth Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2017F4651F5014A200BCB1FB /* OAuth Example */ = {
+			isa = PBXGroup;
+			children = (
+				20E4CE2B1F50440E00B71096 /* Source */,
+				20E4CE2A1F50440000B71096 /* Resources */,
+			);
+			path = "OAuth Example";
+			sourceTree = "<group>";
+		};
+		20E4CE2A1F50440000B71096 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2017F46D1F5014A200BCB1FB /* Assets.xcassets */,
+				2017F4721F5014A200BCB1FB /* Info.plist */,
+				2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */,
+				2017F46A1F5014A200BCB1FB /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		20E4CE2B1F50440E00B71096 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2017F4661F5014A200BCB1FB /* AppDelegate.swift */,
+				20E4CE281F5043FB00B71096 /* OAuhtManager.swift */,
+				2017F4681F5014A200BCB1FB /* ViewController.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2017F4621F5014A200BCB1FB /* OAuth Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2017F4751F5014A200BCB1FB /* Build configuration list for PBXNativeTarget "OAuth Example" */;
+			buildPhases = (
+				2017F45F1F5014A200BCB1FB /* Sources */,
+				2017F4601F5014A200BCB1FB /* Frameworks */,
+				2017F4611F5014A200BCB1FB /* Resources */,
+				2096A49F1F543B57003D4E37 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth Example";
+			productName = "OAuth Example";
+			productReference = 2017F4631F5014A200BCB1FB /* OAuth Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2017F45B1F5014A200BCB1FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "High-Mobility GmbH";
+				TargetAttributes = {
+					2017F4621F5014A200BCB1FB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = F42CFRE556;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2017F45E1F5014A200BCB1FB /* Build configuration list for PBXProject "OAuth Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2017F45A1F5014A200BCB1FB;
+			productRefGroup = 2017F4641F5014A200BCB1FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2017F4621F5014A200BCB1FB /* OAuth Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2017F4611F5014A200BCB1FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */,
+				2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */,
+				2017F46C1F5014A200BCB1FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2017F45F1F5014A200BCB1FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */,
+				20E4CE291F5043FB00B71096 /* OAuhtManager.swift in Sources */,
+				2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2017F46A1F5014A200BCB1FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2017F46B1F5014A200BCB1FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2017F4701F5014A200BCB1FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2017F4731F5014A200BCB1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2017F4741F5014A200BCB1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2017F4761F5014A200BCB1FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F42CFRE556;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "OAuth Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hm.OAuth-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2017F4771F5014A200BCB1FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F42CFRE556;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "OAuth Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hm.OAuth-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2017F45E1F5014A200BCB1FB /* Build configuration list for PBXProject "OAuth Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2017F4731F5014A200BCB1FB /* Debug */,
+				2017F4741F5014A200BCB1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2017F4751F5014A200BCB1FB /* Build configuration list for PBXNativeTarget "OAuth Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2017F4761F5014A200BCB1FB /* Debug */,
+				2017F4771F5014A200BCB1FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2017F45B1F5014A200BCB1FB /* Project object */;
+}
