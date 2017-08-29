@@ -104,31 +104,36 @@ class ViewController: UIViewController {
         /*
  
          Before using the OAuth, it's required variables must be set:
-         - go to https://developers.high-mobility.com/oauth to get and paste:
-            * authURI
-            * clientID
-            * tokenURI
-            * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
-         - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 more thing:
+         - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 thing:
             * find the SAME APP you used for the LocalDevice initialisation
             * click on it's identifier (serial number, it turns gray when hovering)
             * copy the APP ID
-         - figure out the "scope"
-            * an example, that would be needed for this sample – "door-locks.read,door-locks.write"
-         - now fill in all the needed vars
-            * after filling in the "redirectScheme", go to Info.plist and replace the "PASTE..." field
-            * then continue here
+
+         - go to https://developers.high-mobility.com/oauth to get and paste:
+            * authURI
+            * clientID
+            * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
+            * tokenURI
+
+         - figure out the SCOPE
+            * minimum needed for this sample app – "door-locks.read,door-locks.write"
+
+         - set the REDIRECT SCHEME in Info
+            * copy the "redirectScheme" value again
+            * open file named Info.plist
+            * find a row that says "PASTE..."
+            * paste
  
          */
 
-//        appID = <#String#>
-//        authURI = <#String#>
-//        clientID = <#String#>
-//        redirectScheme = <#String#>
-//        scope = <#String#>
-//        tokenURI = <#String#>
+        appID = "<#String#>"
+        authURI = "<#String#>"
+        clientID = "<#String#>"
+        redirectScheme = "<#String#>"
+        scope = "<#String#>"
+        tokenURI = "<#String#>"
 
-        guard appID != nil, authURI != nil, clientID != nil, redirectScheme != nil, scope != nil, tokenURI != nil else {
+        guard [appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in (str == nil) || (str == "<#String#>") }) else {
             fatalError("You've forgotten to set the necessary variables!")
         }
 
