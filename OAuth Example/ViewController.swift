@@ -65,10 +65,7 @@ class ViewController: UIViewController {
         /*
 
          Before using the HMKit, you must initialise the LocalDevice with a snippet from the Developer Center:
-         - go to https://developers.high-mobility.com
-         - LOGIN
-         - choose DEVELOP (in top-left, the (2nd) button with a spanner)
-         - choose APPLICATIONS (in the left)
+         - go to https://developers.high-mobility.com/develop/applications/device-apps/
          - look for SANDBOX app
          - click on the "Device Certificates" on the app
          - choose the SANDBOX DEVICE
@@ -113,7 +110,8 @@ class ViewController: UIViewController {
             * tokenURI
             * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
          - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 more thing:
-            * choose an APP by clicking on it's identifier (serial number, it turns gray when hovering)
+            * find the SAME APP you used for the LocalDevice initialisation
+            * click on it's identifier (serial number, it turns gray when hovering)
             * copy the APP ID
          - figure out the "scope"
             * an example, that would be needed for this sample – "door-locks.read,door-locks.write"
