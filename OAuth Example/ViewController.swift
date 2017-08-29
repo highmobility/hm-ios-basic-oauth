@@ -116,6 +116,7 @@ class ViewController: UIViewController {
          - figure out the "scope"
             * an example, that would be needed for this sample – "door-locks.read,door-locks.write"
          - now fill in all the needed vars
+            * after filling in the "redirectScheme", go to Info.plist and replace the "com.hm.dev.1503672371-xuub2pgnna8k" with your own
  
          */
 
