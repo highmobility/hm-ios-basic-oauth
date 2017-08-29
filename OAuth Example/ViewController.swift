@@ -108,6 +108,7 @@ class ViewController: UIViewController {
             * find the SAME APP you used for the LocalDevice initialisation
             * click on it's identifier (serial number, it turns gray when hovering)
             * copy the APP ID
+            * paste it after the comment-block
 
          - go to https://developers.high-mobility.com/oauth to get and paste:
             * authURI
@@ -118,12 +119,14 @@ class ViewController: UIViewController {
          - figure out the SCOPE
             * minimum needed for this sample app – "door-locks.read,door-locks.write"
 
-         - set the REDIRECT SCHEME in Info
-            * copy the "redirectScheme" value again
+         - set the REDIRECT SCHEME in the plist
+            * copy the MAIN PART of "redirectScheme" value - the stuff before ://in-app-callback
             * open file named Info.plist
             * find a row that says "PASTE..."
             * paste
  
+        - happiness
+
          */
 
         appID = "<#String#>"
@@ -133,7 +136,7 @@ class ViewController: UIViewController {
         scope = "<#String#>"
         tokenURI = "<#String#>"
 
-        guard [appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in (str == nil) || (str == "<#String#>") }) else {
+        guard ![appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in (str == nil) || (str == "<#String#>") }) else {
             fatalError("You've forgotten to set the necessary variables!")
         }
 
