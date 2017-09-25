@@ -96,7 +96,7 @@ class ViewController: UIViewController {
         // PASTE THE SNIPPET HERE
 
         guard LocalDevice.shared.certificate != nil else {
-            fatalError("You've forgotten the LocalDevice's INITIALISATION")
+            fatalError("\n\nYou've forgotten the LocalDevice's INITIALISATION")
         }
 
 
@@ -137,7 +137,7 @@ class ViewController: UIViewController {
         tokenURI = "<#String#>"
 
         guard ![appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in (str == nil) || (str == "<#String#>") }) else {
-            fatalError("You've forgotten to set the necessary variables!")
+            fatalError("\n\nYou've forgotten to set the necessary variables!")
         }
 
 
