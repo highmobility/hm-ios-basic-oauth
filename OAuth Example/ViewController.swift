@@ -162,7 +162,7 @@ fileprivate extension ViewController {
         button.setTitle("Downloading Access Certificates...", for: .normal)
 
         do {
-            try Telematics.downloadAccessCertificate(accessToken: accessToken, completion: { (resultWithVehicleSerial: Telematics.TelematicsRequestResult<Data>) in
+            try Telematics.downloadAccessCertificate(accessToken: accessToken, completion: { (resultWithVehicleSerial: TelematicsRequestResult<Data>) in
                 OperationQueue.main.addOperation {
                     switch resultWithVehicleSerial {
                     case .failure(let reason):
@@ -211,7 +211,7 @@ fileprivate extension ViewController {
 
             let command = Command.lockDoorsBytes(.unlock)
 
-            try Telematics.sendCommand(command, vehicleSerial: vehicleSerial, completionHandler: { (result: Telematics.TelematicsRequestResult<Data?>) in
+            try Telematics.sendCommand(command, vehicleSerial: vehicleSerial, completionHandler: { (result: TelematicsRequestResult<Data?>) in
                 OperationQueue.main.addOperation {
                     switch result {
                     case .failure(let reason):
