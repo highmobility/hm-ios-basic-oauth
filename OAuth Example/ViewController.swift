@@ -65,26 +65,26 @@ class ViewController: UIViewController {
         /*
 
          Before using the HMKit, you must initialise the LocalDevice with a snippet from the Developer Center:
-         - go to https://developers.high-mobility.com/develop/applications/device-apps/
-         - look for SANDBOX app
-         - click on the "Device Certificates" on the app
-         - choose the SANDBOX DEVICE
-         - copy the whole snippet
-         - paste it below this comment box
-         - you made it!
+             - go to https://developers.high-mobility.com/develop/applications/device-apps/
+             - look for SANDBOX app
+             - click on the "Device Certificates" on the app
+             - choose the SANDBOX DEVICE
+             - copy the whole snippet
+             - paste it below this comment box
+             - you made it!
 
          Bonus steps after completing the above:
-         - relax
-         - celebrate
-         - explore the APIs
+             - relax
+             - celebrate
+             - explore the APIs
 
 
          An example of a snippet copied from the Developer Center (do not use, will obviously not work):
 
          do {
-            try LocalDevice.sharedDevice.initialise(deviceCertificate: Base64String,
-                                                    devicePrivateKey: Base64String,
-                                                    issuerPublicKey: Base64String)
+            try LocalDevice.shared.initialise(deviceCertificate: Base64String,
+                                              devicePrivateKey: Base64String,
+                                              issuerPublicKey: Base64String)
          }
          catch {
             // Handle the error
@@ -93,7 +93,9 @@ class ViewController: UIViewController {
 
          */
 
+
         // PASTE THE SNIPPET HERE
+
 
         guard LocalDevice.shared.certificate != nil else {
             fatalError("\n\nYou've forgotten the LocalDevice's INITIALISATION")
@@ -104,30 +106,31 @@ class ViewController: UIViewController {
         /*
  
          Before using the OAuth, it's required variables must be set:
-         - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 thing:
-            * find the SAME APP you used for the LocalDevice initialisation
-            * click on it's identifier (serial number, it turns gray when hovering)
-            * copy the APP ID
-            * paste it after the comment-block
+             - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 thing:
+                * find the SAME APP you used for the LocalDevice initialisation
+                * click on it's identifier (serial number, it turns gray when hovering)
+                * copy the APP ID
+                * paste it after the comment-block
 
-         - go to https://developers.high-mobility.com/oauth to get and paste:
-            * authURI
-            * clientID
-            * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
-            * tokenURI
+             - go to https://developers.high-mobility.com/oauth to get and paste:
+                * authURI
+                * clientID
+                * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
+                * tokenURI
 
-         - figure out the SCOPE
-            * minimum needed for this sample app – "door-locks.read,door-locks.write"
+             - figure out the SCOPE
+                * minimum needed for this sample app – "door-locks.read,door-locks.write"
 
-         - set the REDIRECT SCHEME in the plist
-            * copy the MAIN PART of "redirectScheme" value - the stuff before ://in-app-callback
-            * open file named Info.plist
-            * find a row that says "PASTE..."
-            * paste
- 
-        - happiness
+             - set the REDIRECT SCHEME in the plist
+                * copy the MAIN PART of "redirectScheme" value - the stuff before ://in-app-callback
+                * open file named Info.plist
+                * find a row that says "PASTE..."
+                * paste
+
+             - happiness
 
          */
+
 
         appID = "<#String#>"
         authURI = "<#String#>"
@@ -135,6 +138,7 @@ class ViewController: UIViewController {
         redirectScheme = "<#String#>"
         scope = "<#String#>"
         tokenURI = "<#String#>"
+
 
         guard ![appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in (str == nil) || (str == "<#String#>") }) else {
             fatalError("\n\nYou've forgotten to set the necessary variables!")
@@ -207,9 +211,7 @@ fileprivate extension ViewController {
         button.setTitle("Sending Telematics command...", for: .normal)
 
         do {
-            typealias Command = AutoAPI.DoorLocksCommand
-
-            let command = Command.lockDoorsBytes(.unlock)
+            let command = DoorLocks.lockUnlock(.unlock)
 
             try Telematics.sendCommand(command, vehicleSerial: vehicleSerial, completionHandler: { (result: TelematicsRequestResult<Data?>) in
                 OperationQueue.main.addOperation {
@@ -224,7 +226,7 @@ fileprivate extension ViewController {
 
                         self.label.text = "SENT TELEMATICS COMMAND\nsuccess: " + data.map { String(format: "%02X", $0) }.joined()
 
-                        guard let response = AutoAPI.parseIncomingCommand(data)?.value as? Command.Response else {
+                        guard let response = AutoAPI.parseBinary(data) as? DoorLocks else {
                             return self.label.text = "SENT TELEMATICS COMMAND\nerror: response is of unexpected value" + data.map { String(format: "%02X", $0) }.joined()
                         }
 
