@@ -63,73 +63,32 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         /*
-
-         Before using the HMKit, you must initialise the LocalDevice with a snippet from the Developer Center:
-             - go to https://developers.high-mobility.com/develop/applications/device-apps/
-             - look for SANDBOX app
-             - click on the "Device Certificates" on the app
-             - choose the SANDBOX DEVICE
-             - copy the whole snippet
-             - paste it below this comment box
-             - you made it!
-
-         Bonus steps after completing the above:
-             - relax
-             - celebrate
-             - explore the APIs
-
-
-         An example of a snippet copied from the Developer Center (do not use, will obviously not work):
-
-         do {
-            try LocalDevice.shared.initialise(deviceCertificate: Base64String,
-                                              devicePrivateKey: Base64String,
-                                              issuerPublicKey: Base64String)
-         }
-         catch {
-            // Handle the error
-            print("Invalid initialisation parameters, please double-check the snippet: \(error)")
-         }
-
+         * Before using HMKit, you'll have to initialise the LocalDevice singleton
+         * with a snippet from the Platform Workspace:
+         *
+         *   1. Sign in to the workspace
+         *   2. Go to the LEARN section and choose iOS
+         *   3. Follow the Getting Started instructions
+         *
+         * By the end of the tutorial you will have a snippet for initialisation,
+         * that looks something like this:
+         *
+         *   do {
+         *       try LocalDevice.shared.initialise(deviceCertificate: Base64String, devicePrivateKey: Base64String, issuerPublicKey: Base64String)
+         *   }
+         *   catch {
+         *       // Handle the error
+         *       print("Invalid initialisation parameters, please double-check the snippet: \(error)")
+         *   }
          */
 
 
-        // PASTE THE SNIPPET HERE
+        <#Paste the SNIPPET here#>
 
 
         guard LocalDevice.shared.certificate != nil else {
             fatalError("\n\nYou've forgotten the LocalDevice's INITIALISATION")
         }
-
-
-
-        /*
- 
-         Before using the OAuth, it's required variables must be set:
-             - go to https://developers.high-mobility.com/develop/applications/device-apps/ to get 1 thing:
-                * find the SAME APP you used for the LocalDevice initialisation
-                * click on it's identifier (serial number, it turns gray when hovering)
-                * copy the APP ID
-                * paste it after the comment-block
-
-             - go to https://developers.high-mobility.com/oauth to get and paste:
-                * authURI
-                * clientID
-                * redirectScheme (for iOS app, it's under "URL-SCHEME FOR IOS & ANDROID", not the "REDIRECT URI")
-                * tokenURI
-
-             - figure out the SCOPE
-                * minimum needed for this sample app – "door-locks.read,door-locks.write"
-
-             - set the REDIRECT SCHEME in the plist
-                * copy the MAIN PART of "redirectScheme" value - the stuff before ://in-app-callback
-                * open file named Info.plist
-                * find a row that says "PASTE..."
-                * paste
-
-             - happiness
-
-         */
 
 
         appID = "<#String#>"
@@ -213,7 +172,7 @@ fileprivate extension ViewController {
         do {
             let command = DoorLocks.lockUnlock(.unlock)
 
-            try Telematics.sendCommand(command, vehicleSerial: vehicleSerial, completionHandler: { (result: TelematicsRequestResult<Data?>) in
+            try Telematics.sendCommand(command, serial: vehicleSerial, completionHandler: { (result: TelematicsRequestResult<Data?>) in
                 OperationQueue.main.addOperation {
                     switch result {
                     case .failure(let reason):
