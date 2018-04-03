@@ -12,12 +12,16 @@
 		2017F46C1F5014A200BCB1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46A1F5014A200BCB1FB /* Main.storyboard */; };
 		2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46D1F5014A200BCB1FB /* Assets.xcassets */; };
 		2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */; };
-		2096A4991F543B57003D4E37 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4961F543B57003D4E37 /* AutoAPI.framework */; };
-		2096A49A1F543B57003D4E37 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4961F543B57003D4E37 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2096A49B1F543B57003D4E37 /* HMCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4971F543B57003D4E37 /* HMCrypto.framework */; };
-		2096A49C1F543B57003D4E37 /* HMCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4971F543B57003D4E37 /* HMCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2096A49D1F543B57003D4E37 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; };
-		2096A49E1F543B57003D4E37 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2096A4981F543B57003D4E37 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; };
+		207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		207DDA1C2073692300B30370 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA162073692200B30370 /* CommonCrypto.framework */; };
+		207DDA1D2073692300B30370 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA162073692200B30370 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; };
+		207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; };
+		207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		207DDA222073692300B30370 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; };
+		207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		20E4CE291F5043FB00B71096 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4CE281F5043FB00B71096 /* OAuthManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +32,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2096A49C1F543B57003D4E37 /* HMCrypto.framework in Embed Frameworks */,
-				2096A49E1F543B57003D4E37 /* HMKit.framework in Embed Frameworks */,
-				2096A49A1F543B57003D4E37 /* AutoAPI.framework in Embed Frameworks */,
+				207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */,
+				207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */,
+				207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */,
+				207DDA1D2073692300B30370 /* CommonCrypto.framework in Embed Frameworks */,
+				207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,9 +51,11 @@
 		2017F46D1F5014A200BCB1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2017F4701F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2017F4721F5014A200BCB1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2096A4961F543B57003D4E37 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
-		2096A4971F543B57003D4E37 /* HMCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCrypto.framework; sourceTree = "<group>"; };
-		2096A4981F543B57003D4E37 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
+		207DDA152073692200B30370 /* HMUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = "<group>"; };
+		207DDA162073692200B30370 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonCrypto.framework; sourceTree = "<group>"; };
+		207DDA172073692200B30370 /* HMCryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCryptoKit.framework; sourceTree = "<group>"; };
+		207DDA182073692200B30370 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
+		207DDA192073692300B30370 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
 		20E4CE281F5043FB00B71096 /* OAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2096A49B1F543B57003D4E37 /* HMCrypto.framework in Frameworks */,
-				2096A49D1F543B57003D4E37 /* HMKit.framework in Frameworks */,
-				2096A4991F543B57003D4E37 /* AutoAPI.framework in Frameworks */,
+				207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */,
+				207DDA222073692300B30370 /* HMKit.framework in Frameworks */,
+				207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */,
+				207DDA1C2073692300B30370 /* CommonCrypto.framework in Frameworks */,
+				207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +78,11 @@
 		2017F45A1F5014A200BCB1FB = {
 			isa = PBXGroup;
 			children = (
-				2096A4961F543B57003D4E37 /* AutoAPI.framework */,
-				2096A4971F543B57003D4E37 /* HMCrypto.framework */,
-				2096A4981F543B57003D4E37 /* HMKit.framework */,
+				207DDA182073692200B30370 /* AutoAPI.framework */,
+				207DDA162073692200B30370 /* CommonCrypto.framework */,
+				207DDA172073692200B30370 /* HMCryptoKit.framework */,
+				207DDA192073692300B30370 /* HMKit.framework */,
+				207DDA152073692200B30370 /* HMUtilities.framework */,
 				2017F4651F5014A200BCB1FB /* OAuth Example */,
 				2017F4641F5014A200BCB1FB /* Products */,
 			);
@@ -142,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "High-Mobility GmbH";
 				TargetAttributes = {
 					2017F4621F5014A200BCB1FB = {
@@ -231,6 +243,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -238,6 +251,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -287,6 +301,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -294,6 +309,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

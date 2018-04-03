@@ -189,7 +189,7 @@ fileprivate extension ViewController {
                             return self.label.text = "SENT TELEMATICS COMMAND\nerror: response is of unexpected value" + data.map { String(format: "%02X", $0) }.joined()
                         }
 
-                        self.label.text = "SENT TELEMATICS COMMAND\nsuccess: \(response.doors)".replacingOccurrences(of: "AutoAPI.", with: "")
+                        self.label.text = "SENT TELEMATICS COMMAND\nsuccess: \(String(describing: response.doors))".replacingOccurrences(of: "AutoAPI.", with: "")
                     }
                 }
             })
