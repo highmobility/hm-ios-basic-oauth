@@ -94,7 +94,7 @@ class ViewController: UIViewController {
         appID = "<#String#>"
         authURI = "<#String#>"
         clientID = "<#String#>"
-        redirectScheme = "<#String#>"
+        redirectScheme = "<#String#>"   // Insert the same scheme to Project > Info > URL Types > URL Schemes (without the ://in-app-callback part)
         scope = "<#String#>"
         tokenURI = "<#String#>"
 
