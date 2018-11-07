@@ -22,7 +22,6 @@
 		207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		207DDA222073692300B30370 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; };
 		207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		20E4CE291F5043FB00B71096 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E4CE281F5043FB00B71096 /* OAuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +55,6 @@
 		207DDA172073692200B30370 /* HMCryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCryptoKit.framework; sourceTree = "<group>"; };
 		207DDA182073692200B30370 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
 		207DDA192073692300B30370 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
-		20E4CE281F5043FB00B71096 /* OAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				2017F4661F5014A200BCB1FB /* AppDelegate.swift */,
-				20E4CE281F5043FB00B71096 /* OAuthManager.swift */,
 				2017F4681F5014A200BCB1FB /* ViewController.swift */,
 			);
 			name = Source;
@@ -202,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */,
-				20E4CE291F5043FB00B71096 /* OAuthManager.swift in Sources */,
 				2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
