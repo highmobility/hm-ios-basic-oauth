@@ -14,8 +14,6 @@
 		2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */; };
 		207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; };
 		207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		207DDA1C2073692300B30370 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA162073692200B30370 /* CommonCrypto.framework */; };
-		207DDA1D2073692300B30370 /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA162073692200B30370 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; };
 		207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; };
@@ -34,7 +32,6 @@
 				207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */,
 				207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */,
 				207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */,
-				207DDA1D2073692300B30370 /* CommonCrypto.framework in Embed Frameworks */,
 				207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,7 +48,6 @@
 		2017F4701F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2017F4721F5014A200BCB1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207DDA152073692200B30370 /* HMUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = "<group>"; };
-		207DDA162073692200B30370 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CommonCrypto.framework; sourceTree = "<group>"; };
 		207DDA172073692200B30370 /* HMCryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCryptoKit.framework; sourceTree = "<group>"; };
 		207DDA182073692200B30370 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
 		207DDA192073692300B30370 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
@@ -65,7 +61,6 @@
 				207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */,
 				207DDA222073692300B30370 /* HMKit.framework in Frameworks */,
 				207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */,
-				207DDA1C2073692300B30370 /* CommonCrypto.framework in Frameworks */,
 				207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				207DDA182073692200B30370 /* AutoAPI.framework */,
-				207DDA162073692200B30370 /* CommonCrypto.framework */,
 				207DDA172073692200B30370 /* HMCryptoKit.framework */,
 				207DDA192073692300B30370 /* HMKit.framework */,
 				207DDA152073692200B30370 /* HMUtilities.framework */,

@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     private var authURI: String!
     private var clientID: String!
     private var redirectScheme: String!
-    private var scope: String!
     private var tokenURI: String!
 
 
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         /*
-         * Before using HMKit, you'll have to initialise the LocalDevice singleton
+         * Before using HMKit, you'll have to initialise the HMKit singleton
          * with a snippet from the Platform Workspace:
          *
          *   1. Sign in to the workspace
@@ -41,7 +40,7 @@ class ViewController: UIViewController {
          * that looks something like this:
          *
          *   do {
-         *       try HMLocalDevice.shared.initialise(deviceCertificate: Base64String, devicePrivateKey: Base64String, issuerPublicKey: Base64String)
+         *       try HMKit.shared.initialise(deviceCertificate: Base64String, devicePrivateKey: Base64String, issuerPublicKey: Base64String)
          *   }
          *   catch {
          *       // Handle the error
@@ -57,29 +56,28 @@ class ViewController: UIViewController {
         authURI = "<#String#>"
         clientID = "<#String#>"
         redirectScheme = "<#String#>"   // Insert the same scheme to Project > Info > URL Types > URL Schemes (without the ://in-app-callback part)
-        scope = "<#String#>"
         tokenURI = "<#String#>"
 
-        guard HMLocalDevice.shared.certificate != nil else {
-            fatalError("\n\nYou've forgotten the LocalDevice's INITIALISATION")
+        guard HMKit.shared.certificate != nil else {
+            fatalError("\n\nYou've forgotten the HMKit's INITIALISATION")
         }
 
-        guard ![appID, authURI, clientID, redirectScheme, scope, tokenURI].contains(where: { (str: String?) -> Bool in str == "<#String#>" }) else {
+        guard ![appID, authURI, clientID, redirectScheme, tokenURI].contains(where: { (str: String?) -> Bool in str == "<#String#>" }) else {
             fatalError("\n\nYou've forgotten to set the necessary variables!")
         }
 
         // Logging options that are interesting to you
-        HMLocalDevice.loggingOptions = [.bluetooth, .telematics, .oauth]
+        HMKit.shared.loggingOptions = [.bluetooth, .telematics, .oauth]
 
         // After a tiny delay, open the OAuth URL
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-            HMOAuth.shared.launchAuthFlow(appID: self.appID, authURI: self.authURI, clientID: self.clientID, redirectScheme: self.redirectScheme, scope: self.scope, tokenURI: self.tokenURI, state: "mikuonu", for: self) { authResult in
+            HMOAuth.shared.launchAuthFlow(appID: self.appID, authURI: self.authURI, clientID: self.clientID, redirectScheme: self.redirectScheme, tokenURI: self.tokenURI, state: "mikuonu", for: self) { authResult in
                 OperationQueue.main.addOperation {
                     switch authResult {
                     case .error(let error, let state):
                         self.label.text = "DOWNLOAD ACCESS CERTS\nerror: \(error)\nstate:" + (state ?? "nil")
 
-                    case .success(let token, let state):
+                    case .success(let token, let expiresIn, let refreshToken, let state):
                         self.label.text = "ACCESS TOKEN\nsuccess: " + token + "\nstate:" + (state ?? "nil")
 
                         print("TOKEN:", token, "state:", state ?? "nil")
@@ -125,7 +123,7 @@ private extension ViewController {
         button.setTitle("Sending Telematics command...", for: .normal)
 
         do {
-            let command = AADoorLocks.lockUnlock(.unlocked)
+            let command = AADoorLocks.lockUnlock(.unlocked).bytes
 
             try HMTelematics.sendCommand(command, serial: vehicleSerial, completionHandler: { (result: HMTelematicsRequestResult<Data?>) in
                 OperationQueue.main.addOperation {
