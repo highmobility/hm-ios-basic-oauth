@@ -77,7 +77,7 @@ class ViewController: UIViewController {
                     case .error(let error, let state):
                         self.label.text = "DOWNLOAD ACCESS CERTS\nerror: \(error)\nstate:" + (state ?? "nil")
 
-                    case .success(let token, let expiresIn, let refreshToken, let state):
+                    case .success(let token, _, _, let state):
                         self.label.text = "ACCESS TOKEN\nsuccess: " + token + "\nstate:" + (state ?? "nil")
 
                         print("TOKEN:", token, "state:", state ?? "nil")
