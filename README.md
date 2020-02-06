@@ -1,16 +1,15 @@
 # Overview
 
-This sample app for iOS uses the OAuth API of High-Mobility to have car access granted by the owner. The OAuth flow is described in detail on https://developers.high-mobility.com/resources/documentation/cloud-api/oauth2/intro
+This sample app for iOS uses the OAuth API of High-Mobility to have car access granted by the owner. The OAuth flow is described in detail [here](https://high-mobility.com/learn/documentation/cloud-api/oauth2/intro/#mobile-and-native-apps).
 
 # Configuration
 
-Before running the app, make sure to configure the following in `ViewController.swift`:
+Before running the app, make sure to configure the following in `Manager.swift`:
 
 1. Initialise HMKit with a valid device certiticate from the Developer Center https://developers.high-mobility.com/
 2. In the Developer Center, go to the `OAuth2 Client` settings page
 3. Copy and insert the Client ID, Client Secret, Auth URI, Token URI, URL Scheme and scope into the app. No worries, all of this is written on OAuth page
-4. Also insert the App ID in the `ViewController.swift` file where there's a placeholder
-5. Set the scopes for which you ask permissions - the full list is here https://developers.high-mobility.com/resources/documentation/auto-api/api-structure/permissions
+4. Also insert the App ID in the `Manager.swift ` file where there's a placeholder
 
 # Run the app
 
