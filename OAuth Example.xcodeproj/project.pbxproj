@@ -3,23 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4661F5014A200BCB1FB /* AppDelegate.swift */; };
-		2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4681F5014A200BCB1FB /* ViewController.swift */; };
-		2017F46C1F5014A200BCB1FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46A1F5014A200BCB1FB /* Main.storyboard */; };
+		2017F4691F5014A200BCB1FB /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4681F5014A200BCB1FB /* Manager.swift */; };
 		2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46D1F5014A200BCB1FB /* Assets.xcassets */; };
 		2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */; };
-		207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; };
-		207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA152073692200B30370 /* HMUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; };
-		207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA172073692200B30370 /* HMCryptoKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; };
-		207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA182073692200B30370 /* AutoAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		207DDA222073692300B30370 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; };
-		207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 207DDA192073692300B30370 /* HMKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		20A12A2423E9A055001CEA4A /* HMKit in Frameworks */ = {isa = PBXBuildFile; productRef = 20A12A2323E9A055001CEA4A /* HMKit */; };
+		20A12A2723E9A09A001CEA4A /* AutoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 20A12A2623E9A09A001CEA4A /* AutoAPI */; };
+		20A12A2923E9B1E0001CEA4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A2823E9B1E0001CEA4A /* SceneDelegate.swift */; };
+		20A12A2B23E9B2CB001CEA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A2A23E9B2CB001CEA4A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				207DDA212073692300B30370 /* AutoAPI.framework in Embed Frameworks */,
-				207DDA232073692300B30370 /* HMKit.framework in Embed Frameworks */,
-				207DDA1F2073692300B30370 /* HMCryptoKit.framework in Embed Frameworks */,
-				207DDA1B2073692300B30370 /* HMUtilities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,15 +33,12 @@
 /* Begin PBXFileReference section */
 		2017F4631F5014A200BCB1FB /* OAuth Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2017F4661F5014A200BCB1FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2017F4681F5014A200BCB1FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2017F46B1F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2017F4681F5014A200BCB1FB /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		2017F46D1F5014A200BCB1FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2017F4701F5014A200BCB1FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2017F4721F5014A200BCB1FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		207DDA152073692200B30370 /* HMUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMUtilities.framework; sourceTree = "<group>"; };
-		207DDA172073692200B30370 /* HMCryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMCryptoKit.framework; sourceTree = "<group>"; };
-		207DDA182073692200B30370 /* AutoAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AutoAPI.framework; sourceTree = "<group>"; };
-		207DDA192073692300B30370 /* HMKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HMKit.framework; sourceTree = "<group>"; };
+		20A12A2823E9B1E0001CEA4A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		20A12A2A23E9B2CB001CEA4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207DDA202073692300B30370 /* AutoAPI.framework in Frameworks */,
-				207DDA222073692300B30370 /* HMKit.framework in Frameworks */,
-				207DDA1E2073692300B30370 /* HMCryptoKit.framework in Frameworks */,
-				207DDA1A2073692300B30370 /* HMUtilities.framework in Frameworks */,
+				20A12A2723E9A09A001CEA4A /* AutoAPI in Frameworks */,
+				20A12A2423E9A055001CEA4A /* HMKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +57,6 @@
 		2017F45A1F5014A200BCB1FB = {
 			isa = PBXGroup;
 			children = (
-				207DDA182073692200B30370 /* AutoAPI.framework */,
-				207DDA172073692200B30370 /* HMCryptoKit.framework */,
-				207DDA192073692300B30370 /* HMKit.framework */,
-				207DDA152073692200B30370 /* HMUtilities.framework */,
 				2017F4651F5014A200BCB1FB /* OAuth Example */,
 				2017F4641F5014A200BCB1FB /* Products */,
 			);
@@ -103,7 +85,6 @@
 				2017F46D1F5014A200BCB1FB /* Assets.xcassets */,
 				2017F4721F5014A200BCB1FB /* Info.plist */,
 				2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */,
-				2017F46A1F5014A200BCB1FB /* Main.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -112,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				2017F4661F5014A200BCB1FB /* AppDelegate.swift */,
-				2017F4681F5014A200BCB1FB /* ViewController.swift */,
+				20A12A2A23E9B2CB001CEA4A /* ContentView.swift */,
+				2017F4681F5014A200BCB1FB /* Manager.swift */,
+				20A12A2823E9B1E0001CEA4A /* SceneDelegate.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -134,6 +117,10 @@
 			dependencies = (
 			);
 			name = "OAuth Example";
+			packageProductDependencies = (
+				20A12A2323E9A055001CEA4A /* HMKit */,
+				20A12A2623E9A09A001CEA4A /* AutoAPI */,
+			);
 			productName = "OAuth Example";
 			productReference = 2017F4631F5014A200BCB1FB /* OAuth Example.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +152,10 @@
 				Base,
 			);
 			mainGroup = 2017F45A1F5014A200BCB1FB;
+			packageReferences = (
+				20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */,
+				20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */,
+			);
 			productRefGroup = 2017F4641F5014A200BCB1FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,7 +172,6 @@
 			files = (
 				2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */,
 				2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */,
-				2017F46C1F5014A200BCB1FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,22 +182,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2017F4691F5014A200BCB1FB /* ViewController.swift in Sources */,
+				2017F4691F5014A200BCB1FB /* Manager.swift in Sources */,
 				2017F4671F5014A200BCB1FB /* AppDelegate.swift in Sources */,
+				20A12A2B23E9B2CB001CEA4A /* ContentView.swift in Sources */,
+				20A12A2923E9B1E0001CEA4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2017F46A1F5014A200BCB1FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2017F46B1F5014A200BCB1FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -325,7 +309,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -340,10 +325,16 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "OAuth Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hm.OAuth-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,10 +348,16 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "OAuth Example/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hm.OAuth-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -386,6 +383,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:highmobility/hmkit-swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 3.2.1;
+			};
+		};
+		20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:highmobility/auto-api-swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 11.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20A12A2323E9A055001CEA4A /* HMKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */;
+			productName = HMKit;
+		};
+		20A12A2623E9A09A001CEA4A /* AutoAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */;
+			productName = AutoAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2017F45B1F5014A200BCB1FB /* Project object */;
 }
