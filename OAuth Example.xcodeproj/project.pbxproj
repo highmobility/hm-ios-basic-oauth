@@ -11,8 +11,8 @@
 		2017F4691F5014A200BCB1FB /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017F4681F5014A200BCB1FB /* Manager.swift */; };
 		2017F46E1F5014A200BCB1FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46D1F5014A200BCB1FB /* Assets.xcassets */; };
 		2017F4711F5014A200BCB1FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2017F46F1F5014A200BCB1FB /* LaunchScreen.storyboard */; };
+		205B0663256BF457008EC1F8 /* AutoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 205B0662256BF457008EC1F8 /* AutoAPI */; };
 		20A12A2423E9A055001CEA4A /* HMKit in Frameworks */ = {isa = PBXBuildFile; productRef = 20A12A2323E9A055001CEA4A /* HMKit */; };
-		20A12A2723E9A09A001CEA4A /* AutoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 20A12A2623E9A09A001CEA4A /* AutoAPI */; };
 		20A12A2923E9B1E0001CEA4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A2823E9B1E0001CEA4A /* SceneDelegate.swift */; };
 		20A12A2B23E9B2CB001CEA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A12A2A23E9B2CB001CEA4A /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20A12A2723E9A09A001CEA4A /* AutoAPI in Frameworks */,
+				205B0663256BF457008EC1F8 /* AutoAPI in Frameworks */,
 				20A12A2423E9A055001CEA4A /* HMKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +119,7 @@
 			name = "OAuth Example";
 			packageProductDependencies = (
 				20A12A2323E9A055001CEA4A /* HMKit */,
-				20A12A2623E9A09A001CEA4A /* AutoAPI */,
+				205B0662256BF457008EC1F8 /* AutoAPI */,
 			);
 			productName = "OAuth Example";
 			productReference = 2017F4631F5014A200BCB1FB /* OAuth Example.app */;
@@ -132,7 +132,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "High-Mobility GmbH";
 				TargetAttributes = {
 					2017F4621F5014A200BCB1FB = {
@@ -154,7 +154,7 @@
 			mainGroup = 2017F45A1F5014A200BCB1FB;
 			packageReferences = (
 				20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */,
-				20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */,
+				205B0661256BF457008EC1F8 /* XCRemoteSwiftPackageReference "auto-api-swift" */,
 			);
 			productRefGroup = 2017F4641F5014A200BCB1FB /* Products */;
 			projectDirPath = "";
@@ -229,6 +229,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -253,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -288,6 +289,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -306,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -385,6 +387,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		205B0661256BF457008EC1F8 /* XCRemoteSwiftPackageReference "auto-api-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:highmobility/auto-api-swift.git";
+			requirement = {
+                kind = upToNextMinorVersion;
+                minimumVersion = 12.0.0;
+			};
+		};
 		20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:highmobility/hmkit-swift.git";
@@ -393,26 +403,18 @@
 				minimumVersion = 3.2.1;
 			};
 		};
-		20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:highmobility/auto-api-swift.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 11.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		205B0662256BF457008EC1F8 /* AutoAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 205B0661256BF457008EC1F8 /* XCRemoteSwiftPackageReference "auto-api-swift" */;
+			productName = AutoAPI;
+		};
 		20A12A2323E9A055001CEA4A /* HMKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 20A12A2223E9A055001CEA4A /* XCRemoteSwiftPackageReference "hmkit-swift" */;
 			productName = HMKit;
-		};
-		20A12A2623E9A09A001CEA4A /* AutoAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 20A12A2523E9A09A001CEA4A /* XCRemoteSwiftPackageReference "auto-api-swift" */;
-			productName = AutoAPI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -113,7 +113,9 @@ class Manager: ObservableObject {
             .flatMap { serial in
                 Future<HMTelematicsRequestSuccess, HMTelematicsError> { promise in
                     do {
-                        try HMTelematics.sendCommand(AADoors.lockUnlockDoors(locksState: .unlocked), serial: serial, completionWithResponse: promise)
+                        let command = AADoors.lockUnlockDoors(locksState: .unlocked)
+
+                        try HMTelematics.sendCommand(command, serial: serial, completionWithResponse: promise)
                     }
                     catch {
                         promise(.failure(.misc(error)))
@@ -121,7 +123,7 @@ class Manager: ObservableObject {
                 }
             }
             .tryMap { telemSuccess -> [AALock] in
-                guard let doors = AAAutoAPI.parseBinary(telemSuccess.response) as? AADoors,
+                guard let doors = try AAAutoAPI.parseBytes(telemSuccess.response) as? AADoors,
                     let locks = doors.locks?.compactMap({ $0.value }) else {
                         throw HMTelematicsError.invalidData
                 }
