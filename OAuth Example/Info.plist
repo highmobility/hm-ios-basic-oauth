@@ -25,7 +25,11 @@
 			<string>com.best.app.ever</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>PASTE_THE_REDIRECT_SCHEME_HERE</string>
+				<string>PASTE</string>
+				<string>THE</string>
+				<string>REDIRECT</string>
+				<string>SCHEME</string>
+				<string>HERE</string>
 			</array>
 		</dict>
 	</array>
