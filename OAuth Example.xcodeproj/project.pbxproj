@@ -399,8 +399,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:highmobility/auto-api-swift.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 12.0.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
